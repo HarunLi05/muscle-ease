@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f8f8f2">
+  <meta name="description" content="点选人体肌肉，查看简单温和的拉伸与放松动作。给身体，松一口气。">
+  <title>松一松 — 肌肉放松指南</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23465037'/%3E%3Cpath d='M11 27Q9 13 28 11Q30 28 11 27M12 26L24 15' fill='none' stroke='%23eff2cf' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="松一松首页"><span class="brand-mark"><svg viewBox="0 0 32 32" fill="none"><path d="M8 24C6 13 14 6 25 7c1 12-5 20-17 17Z"/><path d="m9 23 12-12M14 18v-6M15 17h6"/></svg></span><span>松一松<span class="brand-en">MUSCLE EASE</span></span></a>
+    <nav><span class="nav-current">肌肉放松指南</span><button class="text-button" id="about-button">使用说明 <span aria-hidden="true">↗</span></button></nav>
+  </header>
+  <main>
+    <section class="intro"><div><div class="eyebrow"><span></span> A LITTLE CARE FOR YOUR BODY</div><h1>哪里有点紧<span class="punctuation">？</span></h1><p>找到那块紧绷的肌肉，给身体一点放松的时间。</p></div><div class="intro-note"><svg viewBox="0 0 32 32" fill="none"><path d="M8 16h16M16 8v16M10.5 10.5l11 11m0-11-11 11"/></svg><span>不用懂解剖学<br>点一点，就能开始</span></div></section>
+    <div class="workspace">
+      <section class="body-panel" aria-labelledby="body-heading">
+        <div class="panel-top"><div><span class="step-label">01 / 找到肌肉</span><h2 id="body-heading">今天，想放松哪里？</h2></div><div class="view-switch" role="group" aria-label="人体视图"><button id="front-button" aria-pressed="true">正面</button><button id="back-button" aria-pressed="false">背面</button></div></div>
+        <div class="body-stage"><div class="stage-grid"></div><div class="stage-orbit orbit-one"></div><div class="stage-orbit orbit-two"></div><span class="anatomy-caption">HUMAN MUSCLE MAP<span>人体浅层肌肉示意</span></span><div id="body-map"></div><div class="map-legend"><span class="legend-dot"></span>点击肌肉查看放松方法</div><span class="view-indicator" id="view-indicator">ANTERIOR · 正面</span></div>
+        <div class="region-picker"><span class="picker-label">也可以直接选择</span><div id="muscle-chips" aria-label="肌肉区域"></div></div>
+      </section>
+      <aside class="guide-panel" aria-labelledby="muscle-name">
+        <div class="guide-content" id="guide-content" aria-live="polite"></div>
+      </aside>
+    </div>
+    <footer><span class="footer-message"><span>✳</span> 慢一点，轻一点。让放松成为日常。</span><button id="sources-button" class="text-button">动作参考与适用范围 <span aria-hidden="true">↗</span></button></footer>
+  </main>
+  <dialog id="info-dialog"><div class="dialog-top"><span class="eyebrow">MUSCLE EASE</span><button class="icon-button" id="close-dialog" aria-label="关闭">×</button></div><div id="dialog-content"></div></dialog>
+  <div class="timer-dock" id="timer-dock" hidden role="region" aria-label="动作计时器"><div class="timer-circle" id="timer-display" aria-live="off">00:30</div><div class="timer-copy"><span class="step-label" id="timer-status">正在放松</span><strong id="timer-title"></strong><span id="timer-caption">自然呼吸，不要憋气</span></div><button id="pause-timer" class="icon-button" aria-label="暂停计时">Ⅱ</button><button id="close-timer" class="icon-button" aria-label="关闭计时器">×</button></div>
+  <script src="app.js"></script>
+</body>
+</html>
